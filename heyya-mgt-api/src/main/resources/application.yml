@@ -1,0 +1,27 @@
+server:
+  shutdown: graceful
+  compression:
+    enabled: true
+    min-response-size: 2048
+    mime-types: text/plain,text/xml,application/xml,application/json
+  port: 8201
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  application:
+    name: heyya-mgt-api
+  profiles:
+    active: local
+
+user-auth:
+  token-expire: 31536000
+  exclude-path-patterns:
+    - /swagger-resources/**
+    - /webjars/**
+    - /v2/**
+    - /swagger-ui.html/**
+    - /error
+    - /metrics/prometheus
+    - /favicon.ico
+    - /doc.html/**
+    - /v1/staff/sign-in

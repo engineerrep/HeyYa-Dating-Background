@@ -1,0 +1,1 @@
+ALTER TABLE tb_user add main_video VARCHAR(500) NOT NULL DEFAULT '' COMMENT '用户主视频';

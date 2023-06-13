@@ -1,0 +1,1 @@
+ALTER TABLE tb_friend ADD UNIQUE KEY (from_user_id,to_user_id);

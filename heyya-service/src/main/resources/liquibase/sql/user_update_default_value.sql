@@ -1,0 +1,1 @@
+ALTER TABLE tb_user ALTER column verify_video_state set DEFAULT 'CHECKED';

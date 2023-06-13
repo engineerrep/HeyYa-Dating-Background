@@ -1,0 +1,1 @@
+ALTER TABLE tb_media add privacy VARCHAR(20) NOT NULL DEFAULT 'PUBLIC' COMMENT '视频隐私状态';

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:liquibase/sql/user_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/user_add_main_video.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/media_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/media_add_state.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/account_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/friend_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/report_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/moment_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/moment_comment_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/tb_moment_thumb_up_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/moment_add_state.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/block_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/feedback_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/visitor_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/unlike_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/staff_create.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/friend_add_unique.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/user_update_default_value.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/media_add_privacy.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/user_add_contact.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/sql/subscribe_email_create.sql" relativeToChangelogFile="false"/>
+</databaseChangeLog>

@@ -1,0 +1,1 @@
+ALTER TABLE tb_media add verify_state VARCHAR(20) NOT NULL DEFAULT 'UNCHECKED' COMMENT '审核状态';

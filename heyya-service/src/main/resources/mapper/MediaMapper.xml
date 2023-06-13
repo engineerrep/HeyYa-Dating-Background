@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heyya.mapper.MediaMapper">
+    <select id="list" parameterType="com.heyya.model.dto.MediaSearchDto" resultType="com.heyya.model.entity.Media">
+        SELECT m.* FROM tb_media AS m
+        LEFT JOIN tb_user As u
+        on m.resource_id=u.id
+        WHERE 1 = 1 and u.active='ACTIVE' and u.deleted='NO' and u.nickname !='' and u.avatar != ''
+        <if test="passIds != null">
+            and m.resource_id not in
+            <foreach collection="passIds" index="index" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="verifyState != null">
+            and m.verify_state = #{verifyState}
+        </if>
+        <if test="privacy != null">
+            and m.privacy = #{privacy}
+        </if>
+        <if test="mediaTypes != null">
+            and m.type in
+            <foreach collection="mediaTypes" index="index" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        order BY m.create_time DESC
+    </select>
+</mapper>
